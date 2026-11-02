@@ -1,5 +1,5 @@
 import unittest
-from statistics_service import StatisticsService
+from statistics_service import StatisticsService, SortBy
 from player import Player
 
 
@@ -44,3 +44,29 @@ class TestStatisticsService(unittest.TestCase):
 
         self.assertEqual(top[0].name, "Gretzky")  # 124
         self.assertEqual(top[1].name, "Lemieux")  # 99
+
+    def test_top_default_sorts_by_points(self):
+        names = [player.name for player in self.stats.top(3)]
+
+        self.assertEqual(names, ["Gretzky", "Lemieux", "Yzerman"])
+
+    def test_top_sorted_by_points(self):
+        names = [player.name for player in self.stats.top(3, SortBy.POINTS)]
+
+        self.assertEqual(names, ["Gretzky", "Lemieux", "Yzerman"])
+
+    def test_top_sorted_by_goals(self):
+        names = [player.name for player in self.stats.top(3, SortBy.GOALS)]
+
+        self.assertEqual(names, ["Lemieux", "Yzerman", "Kurri"])
+
+    def test_top_sorted_by_assists(self):
+        names = [player.name for player in self.stats.top(3, SortBy.ASSISTS)]
+
+        self.assertEqual(names, ["Gretzky", "Yzerman", "Lemieux"])
+
+    def test_top_returns_requested_number_of_players(self):
+        self.assertEqual(len(self.stats.top(3)), 3)
+
+    def test_top_with_too_large_number_returns_all_players(self):
+        self.assertEqual(len(self.stats.top(10)), 5)
