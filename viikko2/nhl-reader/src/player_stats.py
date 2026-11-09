@@ -12,6 +12,11 @@ class PlayerStats:
                     if p.nationality == nationality]
         return sorted(matching, key=lambda p: p.points, reverse=True)
 
+    def top_scorers_by_team(self, team):
+        """Return players of a team sorted by points."""
+        matching = [p for p in self._players if p.team == team]
+        return sorted(matching, key=lambda p: p.points, reverse=True)
+
     def get_nationalities(self):
         "gets nationalities"
         return sorted(set(p.nationality for p in self._players))
