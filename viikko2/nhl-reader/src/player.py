@@ -1,4 +1,5 @@
 
+"Class Player vro"
 class Player:
     def __init__(self, data):
         self.name = data["name"]

@@ -1,3 +1,6 @@
+
+"""Main module for displaying NHL player statistics."""
+
 from rich.console import Console
 from rich.prompt import Prompt
 from rich.table import Table
@@ -19,6 +22,7 @@ AVAILABLE_SEASONS = [ #laiskasti tehty, tiedän, sori
 
 unique_teams = [] 
 def ask_settings():
+    """Ask the user to select a season and nationality."""
     print("\nAvailable seasons:")
     print(", ".join(AVAILABLE_SEASONS))
 
@@ -29,6 +33,7 @@ def ask_settings():
 
 
 def build_table(players, season, nationality):
+    """Build a table displaying the top scorers."""
     table = Table(title=f"Top scorers of {nationality} {season}")
     table.add_column("Name", style="cyan")
     table.add_column("Team", style="magenta")
@@ -49,6 +54,7 @@ def build_table(players, season, nationality):
 
 
 def main():
+    """Run the NHL statistics application."""
 
     url = "https://studies.cs.helsinki.fi/nhlstats/2024-25/players"
     stats = PlayerStats(PlayerReader(url))
