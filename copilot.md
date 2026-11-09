@@ -1,0 +1,3 @@
+Olin yllättynyt siihen, kuinka hyvin copilot teki annetut tehtävät. Se ns. "pohti", ja kysyi lupaa ja kaikenlaista. Tietysti tämä oli aika pieni tehtävä, joten se ei anna syvää kuvausta tekoälyn turvallisuudesta. '
+
+Kokemukseni oli käytännössä se, että tekoälytyökalu toimi moitteetta. Oli ihan kätevää, että se pystyi muokkaamaan tiedostoja jne... 
