@@ -20,7 +20,7 @@ AVAILABLE_SEASONS = [ #laiskasti tehty, tiedän, sori
     "2025-26"
 ]
 
-unique_teams = [] 
+unique_teams = []
 def ask_settings():
     """Ask the user to select a season and nationality."""
     print("\nAvailable seasons:")

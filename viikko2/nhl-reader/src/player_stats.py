@@ -1,4 +1,6 @@
 
+"""Module for retrieving and sorting player statistics."""
+
 class PlayerStats:
     """A class for retrieving and sorting player statistics."""
     def __init__(self, reader):
