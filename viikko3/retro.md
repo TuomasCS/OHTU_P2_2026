@@ -18,4 +18,4 @@ Steps for kierros malli:
 5. Sama toistetaan yhdelle asialle, jonka tekeminen kannattaisi lopettaa.
 6. Kierros käydään läpi kaksi kertaa tai enemmän, jos aika riittää.
 
-Tämä on hyvin hankala saada "tiivistettyä" 200 sanaan, tuntuu siltä että toistan samaa juttua koko ajan. 
+Joillekin ihmisille retro voi toimia hyvänä perspektiivinä, ja ympäristönä, jossa voi olla helpompi keksiä parannettavaa, sillä paine "saada juttu pois alta" on poissa, ainakin osittain. Helpompi pohtia mikä on vialla kun deadline/client meeting on valmis, verrattuna jos 5min ennen sitä pitää sopia kuka esittelee projektin jne...
