@@ -2,3 +2,5 @@
 Ohjelmistotuotanto kurssi jutut 
 
 Tehtävät 2-13 https://github.com/TuomasCS/ohtuvarasto
+
+Viikko 3 web tehtävät https://github.com/TuomasCS/webcounter
