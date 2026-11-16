@@ -33,6 +33,41 @@ Register With Username That Is Already In Use
     Click  button >> text=Register
     Register Should Fail With Message  User with username kalle already exists
 
+Register With Password That Contains Numbers
+    Set Username  uusi_kayttaja_2
+    Set Password  kalle123
+    Set Password Confirmation  kalle123
+    Click  button >> text=Register
+    Register Should Succeed
+
+Register With Password That Contains Special Character
+    Set Username  uusi_kayttaja_3
+    Set Password  kalle#abc
+    Set Password Confirmation  kalle#abc
+    Click  button >> text=Register
+    Register Should Succeed
+
+Register With Password That Contains Only Letters
+    Set Username  uusi_kayttaja_4
+    Set Password  kallekalle
+    Set Password Confirmation  kallekalle
+    Click  button >> text=Register
+    Register Should Fail With Message  Password cannot consist only of letters
+
+Register With Password That Contains Only Uppercase Letters
+    Set Username  uusi_kayttaja_5
+    Set Password  KalleKalle
+    Set Password Confirmation  KalleKalle
+    Click  button >> text=Register
+    Register Should Fail With Message  Password cannot consist only of letters
+
+Register With Password Confirmation That Does Not Match
+    Set Username  uusi_kayttaja_6
+    Set Password  salasana123
+    Set Password Confirmation  salasana124
+    Click  button >> text=Register
+    Register Should Fail With Message  Password and password confirmation do not match
+
 
 *** Keywords ***
 Reset Application Create User And Go To Register Page

@@ -46,6 +46,12 @@ class UserService:
         if len(password) < 8:
             raise UserInputError("Password must be at least 8 characters long")
 
+        if password != password_confirmation:
+            raise UserInputError("Password and password confirmation do not match")
+
+        if password.isalpha():
+            raise UserInputError("Password cannot consist only of letters")
+
         if self._user_repository.find_by_username(username):
             raise UserInputError(f"User with username {username} already exists")
 
